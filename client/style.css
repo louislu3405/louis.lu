@@ -87,12 +87,20 @@ img.profile-picture {
 
 .selected-years {
     font-weight: bold;
+    background: url('img/about_years_bullet.png') no-repeat;
 }
 
 ul.about-years-list{
     list-style-type: none;
 }
 
-ul.selected {
-    list-style-image: url('img/about_years_bullet.png');
+li.about-years {
+    font-size: 20px;
+    margin-top: 24px;
+    line-height: 24px;
+    padding-left: 46px;
+}
+
+p.about-years-p {
+    display: none;
 }
