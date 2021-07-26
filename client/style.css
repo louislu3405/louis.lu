@@ -1,0 +1,98 @@
+ul.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd;
+    overflow: hidden;
+    height: 64px;
+    line-height: 32px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+a {
+display: block;
+padding: 8px;
+}
+
+body {
+    margin: 0px;
+}
+
+li.nav-title {
+    float: left;
+}
+
+li.nav-button {
+    float: right;
+}
+
+div.content {
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: auto; /* give div height when it contains block float divs */
+}
+
+div.self-intro {
+    background-color: aquamarine;
+    height: 524px;
+    width: 44%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: block;
+    float: left;
+}
+
+div.profile-picture {
+    background-color: bisque;
+    height: 524px;
+    width: 44%;
+    padding-left: 3%;
+    padding-right: 3%;
+    float: right;
+    display: block;
+}
+
+div.about-title2 {
+    background-color: beige;
+    width: 27.33%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: block;
+    float: left;
+}
+
+div.about-years-box {
+    background-color: blanchedalmond;
+    width: 27.33%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: block;
+    float: left;
+}
+
+div.about-years-des{
+    background-color: aquamarine;
+    width: 27.33%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: block;
+    float: left;
+}
+
+img.profile-picture {
+    height: 100%;
+    border-radius: 3%;
+}
+
+.selected-years {
+    font-weight: bold;
+}
+
+ul.about-years-list{
+    list-style-type: none;
+}
+
+ul.selected {
+    list-style-image: url('img/about_years_bullet.png');
+}
