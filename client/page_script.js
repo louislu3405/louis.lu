@@ -1,23 +1,26 @@
 function switchYear(el) {
     var years_li = document.getElementsByClassName('about-years');
     var years_p = document.getElementsByClassName('about-years-p'); 
+    console.log(years_p);
     var years_pBox = document.getElementsByClassName('about-years-desbox');
     for (var i = 0; i < years_li.length; i++) {
         year = years_li[i];
+        year_p = years_p[i];
+        year_pBox = years_pBox[i]
         // remove years bold font size and image bullet
         year.classList.remove('selected-years');
-        year.style.height = "auto";
-        var yearHeight = year.offsetHeight;
-        years_pBox[i].style.height = yearHeight + "px";
+        // year.style.height = "auto";
         // show/hide paragaph and reset height
-        years_p[i].style.display = "none"
+        console.log(years_p);
+        year_p.classList.remove('about-years-p-selected');
+        year_pBox.classList.remove('about-years-desbox-selected');
         if (years_li[i] == el) {
-            years_p[i].style.display = "block";
-            years_pBox[i].style.height = "auto";
+            year_p.classList.add('about-years-p-selected');
+            year_pBox.classList.add('about-years-desbox-selected');
         }
     }
     el.classList.add('selected-years');
-    el.style.height = "100px";
+    // el.style.height = "100px";
 }
 
 // mapbox map

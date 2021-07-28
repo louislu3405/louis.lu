@@ -102,7 +102,7 @@ div.profile-picture {
 }
 
 div.about-title2 {
-    background-color: beige;
+    /* background-color: beige; */
     width: 21.33%;
     padding-left: 3%;
     padding-right: 3%;
@@ -112,7 +112,7 @@ div.about-title2 {
 }
 
 div.about-years-box {
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     width: 27.33%;
     padding-left: 3%;
     padding-right: 0%;
@@ -121,7 +121,7 @@ div.about-years-box {
 }
 
 div.about-years-des{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 36.33%;
     padding-left: 3%;
     padding-right: 3%;
@@ -134,11 +134,6 @@ img.profile-picture {
     border-radius: 3%;
 }
 
-.selected-years {
-    font-family: Eina03;
-    background: url('img/about_years_bullet.png') no-repeat;
-}
-
 ul.about-years-list{
     list-style-type: none;
 }
@@ -148,14 +143,40 @@ li.about-years {
     margin-top: 24px;
     line-height: 24px;
     padding-left: 46px;
+    max-height: 24px;
+    transition: max-height 2s;
+}
+
+li.selected-years {
+    font-family: Eina03;
+    background: url('img/about_years_bullet.png') no-repeat;
+    height: 100px;
+    max-height: 500px;
 }
 
 div.about-years-desbox {
+    margin-top: 48px;
+    max-height: 0px;
+    overflow: hidden;
+    /* transition: max-height 1s ease-out; */
+}
+
+div.about-years-desbox-selected {
+    max-height: 1000px;
     margin-top: 24px;
+    transition: max-height 2s;
 }
 
 .about-years-p {
-    transition: height 1s;
+    max-height: 0px;
+    /* transition: max-height 1s ease-out; */
+    margin-top: 0px;
+}
+
+.about-years-p-selected {
+    max-height: 1000px;
+    height: auto;
+    transition: max-height 2s;
 }
 
 .map {
