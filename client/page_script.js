@@ -22,6 +22,8 @@ function switchYear(el) {
     el.classList.add('selected-years');
     // el.style.height = "100px";
 }
+// About geojson data
+var about_geojson = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[121.53762817382814,25.045170158679838]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-113.67641687393188,48.79747892957555]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-76.94013118743896,38.987634705293424]}}]}
 
 // mapbox map
 let map = new mapboxgl.Map({
@@ -36,22 +38,15 @@ let map = new mapboxgl.Map({
 map.addControl(
     new mapboxgl.NavigationControl());
 
-map.on('load', function () {
-    map.addSource('some id', {
-        type: 'geojson',
-        data: {"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[121.53762817382814,25.045170158679838]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-113.67641687393188,48.79747892957555]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-76.94013118743896,38.987634705293424]}}]}
-    });
+about_geojson.features.forEach(function(marker) {
+    
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'about-marker';
 
-    map.addLayer({
-        'id': 'year-locations',
-        'type': 'circle',
-        'source': 'some id',
-        'paint': {
-            'circle-radius': 6,
-            'circle-color': '#B42222'
-        },
-        'filter': ['==', '$type', 'Point']
-    });
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
 });
-
 

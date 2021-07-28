@@ -183,3 +183,12 @@ div.about-years-desbox-selected {
     height: 1080px;
     width: 100%;
 }
+
+.about-marker {
+    background-image: url('./img/about_years_bullet.png');
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
