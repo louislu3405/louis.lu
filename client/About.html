@@ -3,29 +3,40 @@
 <head>
     <title>Louis' Plant Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="page_script.js"></script>
+
 </head>
 <body>
     <div class="nav-bar">
         <ul class="nav-bar">
             <li class="nav-title">
-                <a>Louis' Plant Map</a>
+                <a class="nav-text">Louis' Plant Map</a>
             </li>
             <li class="nav-button">
-                <a>Map</a>
+                <a class="nav-text nav-selected">About</a>
             </li>
             <li class="nav-button">
-                <a>Blog</a>
+                <a class="nav-text">Blog</a>
             </li>
             <li class="nav-button">
-                <a>About</a>
+                <a class="nav-text">Map</a>
             </li>
         </ul>
     </div>
+    <div class="nav-underline-background">
+        <div class="nav-wrap">
+            <div class="nav-underline" id="underline_about"></div>
+        </div>
+        <div class="nav-wrap">
+            <div id="underline_blog"></div>
+        </div>
+        <div class="nav-wrap">
+            <div id="underline_map"></div>
+        </div>
+    </div>
     <div class="content" style="margin-top: 91px;">
         <div class="self-intro">
-            <h1>Hi! I'm Louis!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed risus vel sem iaculis pharetra varius id ex. Vestibulum ut scelerisque nisl, et viverra magna. Aliquam feugiat congue interdum. Duis a lectus at augue ullamcorper viverra in dictum nunc. Nam dapibus ultricies augue, eget scelerisque arcu ullamcorper elementum. Etiam congue a eros id porttitor. Morbi aliquet quam at diam fermentum, sit amet venenatis sem gravida. In ornare elementum lacus sed malesuada. Suspendisse potenti.</p>
+            <h1 style="font-family: Eina03; margin-top: 91px; font-size: 50px;">Hi! I'm Louis!</h1>
+            <p style="margin-top: 31px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed risus vel sem iaculis pharetra varius id ex. Vestibulum ut scelerisque nisl, et viverra magna. Aliquam feugiat congue interdum. Duis a lectus at augue ullamcorper viverra in dictum nunc. Nam dapibus ultricies augue, eget scelerisque arcu ullamcorper elementum. Etiam congue a eros id porttitor. Morbi aliquet quam at diam fermentum, sit amet venenatis sem gravida. In ornare elementum lacus sed malesuada. Suspendisse potenti.</p>
         </div>
         <div class="profile-picture">
             <img src="img/profile_pic.png" class="profile-picture">
@@ -33,7 +44,7 @@
     </div>
     <div class="content" style="margin-top: 120px;">
         <div class="about-title2">
-            <h2>From Taiwan to US</h2>
+            <h2 style="font-size: 50px;">From Taiwan to US</h2>
         </div>
         <div class="about-years-box">
             <ul class="about-years-list">
@@ -43,12 +54,25 @@
             </ul>
         </div>
         <div class="about-years-des" id="year-des1">
-            <p class="about-years-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p class="about-years-p">Curabitur scelerisque odio eu odio molestie, sodales commodo augue fermentum. Etiam at ante tellus. Maecenas sit amet lectus bibendum, vehicula dui quis, semper leo. Ut consectetur ut arcu non maximus. Etiam aliquet velit ut felis tempus placerat. Suspendisse sed ullamcorper orci. In a maximus lorem. Mauris sem purus, ultricies egestas elementum at, dignissim tempus est. Curabitur sit amet mauris et felis venenatis lacinia vitae sollicitudin turpis. </p>
-            <p class="about-years-p">Aenean scelerisque tortor at arcu condimentum, vel eleifend est porttitor. Proin quis turpis at justo dignissim suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse laoreet aliquet odio ac fermentum. Fusce auctor posuere ante vel pretium. Fusce quis convallis urna, in lobortis nisi. Duis hendrerit vehicula mi, non suscipit lacus pharetra sed. </p>
+            <div class="about-years-desbox">
+                <p class="about-years-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div class="about-years-desbox">
+                <p class="about-years-p">Curabitur scelerisque odio eu odio molestie, sodales commodo augue fermentum. Etiam at ante tellus. Maecenas sit amet lectus bibendum, vehicula dui quis, semper leo. Ut consectetur ut arcu non maximus. Etiam aliquet velit ut felis tempus placerat. Suspendisse sed ullamcorper orci. In a maximus lorem. Mauris sem purus, ultricies egestas elementum at, dignissim tempus est. Curabitur sit amet mauris et felis venenatis lacinia vitae sollicitudin turpis. </p>
+            </div>
+            <div class="about-years-desbox">
+                <p class="about-years-p">Aenean scelerisque tortor at arcu condimentum, vel eleifend est porttitor. Proin quis turpis at justo dignissim suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse laoreet aliquet odio ac fermentum. Fusce auctor posuere ante vel pretium. Fusce quis convallis urna, in lobortis nisi. Duis hendrerit vehicula mi, non suscipit lacus pharetra sed. </p>
+            </div>
         </div>
     </div>
+    <div class="content" style="margin-top: 120px;">
+        <div class="map" id="map"></div>
+    </div>
 
+    <!-- mapbox js and css -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
+    <script src="page_script.js"></script>
 </body>
 </html>

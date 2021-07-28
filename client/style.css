@@ -1,8 +1,18 @@
+@font-face {
+    font-family: Eina01;
+    src: url("./font/Textaxis\ -\ Eina01-Regular.otf");
+}
+
+@font-face {
+    font-family: Eina03;
+    src: url("./font/Textaxis\ -\ Eina03-Bold.otf");
+}
+
 ul.nav-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #dddddd;
+    /*background-color: #dddddd;*/
     overflow: hidden;
     height: 64px;
     line-height: 32px;
@@ -17,14 +27,52 @@ padding: 8px;
 
 body {
     margin: 0px;
+    font-family: Eina01;
 }
 
 li.nav-title {
     float: left;
+    font-family: Eina03;
+    font-size: 20px;
 }
 
 li.nav-button {
     float: right;
+    font-size: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 5%;
+}
+
+a.nav-text {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+a.nav-selected {
+    color: #49C7CF;
+    font-weight: 600;
+}
+
+div.nav-underline-background{
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 3px; 
+    background-color: #F2F2F2;
+}
+
+div.nav-wrap {
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 5%;
+    float: right;
+}
+
+div.nav-underline {
+    height: 3px;
+    width: 100%;
+    background-color:#49C7CF;
 }
 
 div.content {
@@ -34,7 +82,7 @@ div.content {
 }
 
 div.self-intro {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     height: 524px;
     width: 44%;
     padding-left: 3%;
@@ -44,7 +92,7 @@ div.self-intro {
 }
 
 div.profile-picture {
-    background-color: bisque;
+    /* background-color: bisque; */
     height: 524px;
     width: 44%;
     padding-left: 3%;
@@ -55,25 +103,26 @@ div.profile-picture {
 
 div.about-title2 {
     background-color: beige;
-    width: 27.33%;
+    width: 21.33%;
     padding-left: 3%;
     padding-right: 3%;
     display: block;
     float: left;
+    font-family: Eina03;
 }
 
 div.about-years-box {
     background-color: blanchedalmond;
     width: 27.33%;
     padding-left: 3%;
-    padding-right: 3%;
+    padding-right: 0%;
     display: block;
     float: left;
 }
 
 div.about-years-des{
     background-color: aquamarine;
-    width: 27.33%;
+    width: 36.33%;
     padding-left: 3%;
     padding-right: 3%;
     display: block;
@@ -86,7 +135,7 @@ img.profile-picture {
 }
 
 .selected-years {
-    font-weight: bold;
+    font-family: Eina03;
     background: url('img/about_years_bullet.png') no-repeat;
 }
 
@@ -101,6 +150,15 @@ li.about-years {
     padding-left: 46px;
 }
 
-p.about-years-p {
-    display: none;
+div.about-years-desbox {
+    margin-top: 24px;
+}
+
+.about-years-p {
+    transition: height 1s;
+}
+
+.map {
+    height: 1080px;
+    width: 100%;
 }
