@@ -185,6 +185,15 @@ div.about-years-desbox-selected {
 }
 
 .about-marker {
+    background-image: url('./img/about_marker_unselected.png');
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.about-marker-selected{
     background-image: url('./img/about_years_bullet.png');
     background-size: cover;
     width: 24px;
