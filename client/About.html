@@ -34,9 +34,10 @@
         </div>
     </div>
     <div class="content" style="margin-top: 91px;">
-        <div class="self-intro">
+        <div class="self-intro-wrap">
             <h1 style="font-family: Eina03; margin-top: 91px; font-size: 50px;">Hi! I'm Louis!</h1>
-            <p style="margin-top: 31px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed risus vel sem iaculis pharetra varius id ex. Vestibulum ut scelerisque nisl, et viverra magna. Aliquam feugiat congue interdum. Duis a lectus at augue ullamcorper viverra in dictum nunc. Nam dapibus ultricies augue, eget scelerisque arcu ullamcorper elementum. Etiam congue a eros id porttitor. Morbi aliquet quam at diam fermentum, sit amet venenatis sem gravida. In ornare elementum lacus sed malesuada. Suspendisse potenti.</p>
+            <p class="self-intro">Welcome to my website! I hope you enjoy everything here!</p>
+            <p class="self-intro">I am a passionate GIS technologist! I graduated from the University of Maryland at 2020, and now I am working as a research assistant at the Geographical Sciences Department at UMD. My interests are geosciences, remote sensing, web developement, and data sciences. When I am not working, I am either bouldering in rock climbing gyms or playing volleyballs with my friends!</p>
         </div>
         <div class="profile-picture">
             <img src="img/profile_pic.png" class="profile-picture">
@@ -55,18 +56,39 @@
         </div>
         <div class="about-years-des" id="year-des1">
             <div class="about-years-desbox about-years-desbox-selected">
-                <p class="about-years-p about-years-p-selected">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <p class="about-years-p about-years-p-selected">Born in Taiwan, I lived and grew up on this lovely island. During my undergraduate study, I joined the mountain climbing club and hiked numerous trails, embrace the fabulous mountains in Taiwan. </p>
             </div>
             <div class="about-years-desbox">
-                <p class="about-years-p">Curabitur scelerisque odio eu odio molestie, sodales commodo augue fermentum. Etiam at ante tellus. Maecenas sit amet lectus bibendum, vehicula dui quis, semper leo. Ut consectetur ut arcu non maximus. Etiam aliquet velit ut felis tempus placerat. Suspendisse sed ullamcorper orci. In a maximus lorem. Mauris sem purus, ultricies egestas elementum at, dignissim tempus est. Curabitur sit amet mauris et felis venenatis lacinia vitae sollicitudin turpis. </p>
+                <p class="about-years-p">This is a special year in my life. In 2017, I spent the whole summer working at Glacier National Park, Montana. I lived in the national park for 3 months, made a lot of new friends, practiced English hearing and speaking by working, and of course, enjoy my life with glaciers and mountains!  </p>
             </div>
             <div class="about-years-desbox">
-                <p class="about-years-p">Aenean scelerisque tortor at arcu condimentum, vel eleifend est porttitor. Proin quis turpis at justo dignissim suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse laoreet aliquet odio ac fermentum. Fusce auctor posuere ante vel pretium. Fusce quis convallis urna, in lobortis nisi. Duis hendrerit vehicula mi, non suscipit lacus pharetra sed. </p>
+                <p class="about-years-p">I moved from Taiwan to the States in 2019 to pursue my M.S. degree in GIS. Now, I live and work in Maryland. </p>
             </div>
         </div>
     </div>
     <div class="content" style="margin-top: 120px;">
         <div class="map" id="map"></div>
+    </div>
+
+    <div class="content" style="margin-top: 91px;">
+        <div class="about-photo-desbox">
+            <ul class="about-photo-list">
+                <li class="about-photo-list-item about-selected-photo-item" onclick="switchPhoto(this);">Photography</li>
+                <p class="about-photo-description selected-about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <li class="about-photo-list-item" onclick="switchPhoto(this);">Hiking</li>
+                <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <li class="about-photo-list-item" onclick="switchPhoto(this);">Rock-climbing</li>
+                <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <li class="about-photo-list-item" onclick="switchPhoto(this);">Skiing</li>
+                <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </ul>
+        </div>
+        <div class="about-photo-wrap">
+            <div class="about-photo"></div>
+            <div class="about-photo"></div>
+            <div class="about-photo"></div>
+            <div class="about-photo"></div>
+        </div>
     </div>
 
     <!-- mapbox js and css -->

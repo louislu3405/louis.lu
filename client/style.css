@@ -8,6 +8,16 @@
     src: url("./font/Textaxis\ -\ Eina03-Bold.otf");
 }
 
+a {
+    display: block;
+    padding: 8px;
+}
+    
+body {
+    margin: 0px;
+    font-family: Eina01;
+}
+
 ul.nav-bar {
     list-style-type: none;
     margin: 0;
@@ -20,15 +30,6 @@ ul.nav-bar {
     padding-right: 6%;
   }
 
-a {
-display: block;
-padding: 8px;
-}
-
-body {
-    margin: 0px;
-    font-family: Eina01;
-}
 
 li.nav-title {
     float: left;
@@ -81,7 +82,7 @@ div.content {
     overflow: auto; /* give div height when it contains block float divs */
 }
 
-div.self-intro {
+div.self-intro-wrap {
     /* background-color: aquamarine; */
     height: 524px;
     width: 44%;
@@ -89,6 +90,10 @@ div.self-intro {
     padding-right: 3%;
     display: block;
     float: left;
+}
+
+p.self-intro {
+    font-size: 1.25em;
 }
 
 div.profile-picture {
@@ -140,6 +145,8 @@ ul.about-years-list{
 
 li.about-years {
     font-size: 20px;
+    font-family: Eina03;
+    font-weight: 700;
     margin-top: 24px;
     line-height: 24px;
     padding-left: 46px;
@@ -149,6 +156,7 @@ li.about-years {
 
 li.selected-years {
     font-family: Eina03;
+    font-weight: 700;
     background: url('img/about_years_bullet.png') no-repeat;
     height: 100px;
     max-height: 500px;
@@ -168,6 +176,7 @@ div.about-years-desbox-selected {
 }
 
 .about-years-p {
+    font-size: 1.25em;
     max-height: 0px;
     /* transition: max-height 1s ease-out; */
     margin-top: 0px;
@@ -200,4 +209,64 @@ div.about-years-desbox-selected {
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+div.about-photo-desbox {
+    background-color: antiquewhite;
+    width: 34%;
+    padding-left: 3%;
+    padding-right: 3%;
+    float: left;
+}
+
+div.about-photo-wrap {
+    background-color: aquamarine;
+    width: 56%;
+    padding-left: 2%;
+    padding-right: 2%;
+    float: left;
+}
+
+ul.about-photo-list {
+    list-style-type: none;
+}
+
+li.about-photo-list-item {
+    font-family: Eina03;
+    font-weight: 500;
+    font-size: 1.875em;
+    padding-left: 46px;
+}
+
+p.about-photo-description {
+    margin-top: 8px;
+    margin-bottom: 7px;
+    padding-left: 46px;
+    max-height: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+p.selected-about-photo-description {
+    padding-top: 38px;
+    padding-bottom: 25px;
+    padding-left: 46px;
+    max-height: 500px;
+    height: auto;
+    transition: max-height 2s;
+}
+
+li.about-selected-photo-item {
+    font-family: Eina03;
+    font-weight: 700;
+    background: url('img/about_years_bullet.png') no-repeat;
+    background-position: 0% 50%;
+}
+
+div.about-photo {
+    background-color: azure;
+    height: 440px;
+    width: 440px;
+    margin: 1%;
+    float: left;
 }

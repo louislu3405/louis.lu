@@ -22,6 +22,23 @@ function switchYear(el) {
     var marker_id = el.id + "-marker"
     document.getElementById(marker_id).click();
 }
+
+function switchPhoto(el) {
+    let photo_li = document.getElementsByClassName('about-photo-list-item');
+    let photoDes_li = document.getElementsByClassName('about-photo-description');
+    for (var i = 0; i < photo_li.length; i++) {
+        photo_li[i].classList.remove('about-selected-photo-item');
+        if (photoDes_li[i].classList.contains('selected-about-photo-description')){
+            photoDes_li[i].classList.remove('selected-about-photo-description');
+        }
+        if (el == photo_li[i]) {
+            photoDes_li[i].classList.add('selected-about-photo-description');
+        } 
+    }
+    el.classList.add('about-selected-photo-item');
+}
+
+
 // About geojson data
 var about_geojson = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"class": "about-marker-selected", "relateYear": "year1994"},"geometry":{"type":"Point","coordinates":[121.53762817382814,25.045170158679838]}},{"type":"Feature","properties":{"class": "about-marker", "relateYear": "year2017"},"geometry":{"type":"Point","coordinates":[-113.67641687393188,48.79747892957555]}},{"type":"Feature","properties":{"class": "about-marker", "relateYear": "year2019"},"geometry":{"type":"Point","coordinates":[-76.94013118743896,38.987634705293424]}}]};
 
