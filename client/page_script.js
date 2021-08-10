@@ -23,17 +23,32 @@ function switchYear(el) {
     document.getElementById(marker_id).click();
 }
 
-function switchPhoto(el) {
+function switchPhoto(el, category) {
     let photo_li = document.getElementsByClassName('about-photo-list-item');
     let photoDes_li = document.getElementsByClassName('about-photo-description');
+    let photoWrap_li = document.getElementsByClassName('about-photo-wrap');
     for (var i = 0; i < photo_li.length; i++) {
         photo_li[i].classList.remove('about-selected-photo-item');
+        // remove seleted photo description
         if (photoDes_li[i].classList.contains('selected-about-photo-description')){
             photoDes_li[i].classList.remove('selected-about-photo-description');
         }
+        // add selected class to description
         if (el == photo_li[i]) {
             photoDes_li[i].classList.add('selected-about-photo-description');
         } 
+
+        // photo section
+        if (photoWrap_li[i].classList.contains('about-photo-wrap-selected')){
+            photoWrap_li[i].classList.remove('about-photo-wrap-selected');
+            photoWrap_li[i].classList.add('about-photo-wrap-unselected');
+        }
+        // add selected class to description
+        // first check the input id
+        if (category == photoWrap_li[i].id) {
+            photoWrap_li[i].classList.remove('about-photo-wrap-unselected');
+            photoWrap_li[i].classList.add('about-photo-wrap-selected');
+        }
     }
     el.classList.add('about-selected-photo-item');
 }

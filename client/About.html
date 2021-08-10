@@ -73,21 +73,39 @@
     <div class="content" style="margin-top: 91px;">
         <div class="about-photo-desbox">
             <ul class="about-photo-list">
-                <li class="about-photo-list-item about-selected-photo-item" onclick="switchPhoto(this);">Photography</li>
+                <li class="about-photo-list-item about-selected-photo-item" onclick="switchPhoto(this, 'about-photography');">Photography</li>
                 <p class="about-photo-description selected-about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <li class="about-photo-list-item" onclick="switchPhoto(this);">Hiking</li>
+                <li class="about-photo-list-item" onclick="switchPhoto(this, 'about-hiking');">Hiking</li>
                 <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <li class="about-photo-list-item" onclick="switchPhoto(this);">Rock-climbing</li>
+                <li class="about-photo-list-item" onclick="switchPhoto(this, 'about-rock_climbing');">Rock-climbing</li>
                 <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <li class="about-photo-list-item" onclick="switchPhoto(this);">Skiing</li>
+                <li class="about-photo-list-item" onclick="switchPhoto(this, 'about-skiing');">Skiing</li>
                 <p class="about-photo-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </ul>
         </div>
-        <div class="about-photo-wrap">
+        <div class="about-photo-wrap about-photo-wrap-selected" id="about-photography">
             <div class="about-photo"></div>
             <div class="about-photo"></div>
             <div class="about-photo"></div>
             <div class="about-photo"></div>
+        </div>
+        <div class="about-photo-wrap" id="about-rock_climbing">
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+        </div>
+        <div class="about-photo-wrap" id="about-skiing">
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+        </div>
+        <div class="about-photo-wrap" id="about-hiking">
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
+            <div class="about-photo1"></div>
         </div>
     </div>
 

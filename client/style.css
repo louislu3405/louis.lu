@@ -8,6 +8,16 @@
     src: url("./font/Textaxis\ -\ Eina03-Bold.otf");
 }
 
+@keyframes showPhoto {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes hidePhoto {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 a {
     display: block;
     padding: 8px;
@@ -220,11 +230,27 @@ div.about-photo-desbox {
 }
 
 div.about-photo-wrap {
+    display: none;
     background-color: aquamarine;
     width: 56%;
     padding-left: 2%;
     padding-right: 2%;
     float: left;
+}
+
+div.about-photo-wrap-selected {
+    display: block;
+    /*animation-name: showPhoto;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;*/
+}
+
+div.about-photo-wrap-unselected {
+    display: none;
+    animation-name: hidePhoto;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
 }
 
 ul.about-photo-list {
@@ -265,6 +291,14 @@ li.about-selected-photo-item {
 
 div.about-photo {
     background-color: azure;
+    height: 440px;
+    width: 440px;
+    margin: 1%;
+    float: left;
+}
+
+div.about-photo1 {
+    background-color:blanchedalmond;
     height: 440px;
     width: 440px;
     margin: 1%;
