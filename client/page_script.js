@@ -27,6 +27,8 @@ function switchPhoto(el, category) {
     let photo_li = document.getElementsByClassName('about-photo-list-item');
     let photoDes_li = document.getElementsByClassName('about-photo-description');
     let photoWrap_li = document.getElementsByClassName('about-photo-wrap');
+    let unselectedDiv;
+    let selectedDiv;
     for (var i = 0; i < photo_li.length; i++) {
         photo_li[i].classList.remove('about-selected-photo-item');
         // remove seleted photo description
@@ -40,18 +42,27 @@ function switchPhoto(el, category) {
 
         // photo section
         if (photoWrap_li[i].classList.contains('about-photo-wrap-selected')){
-            photoWrap_li[i].classList.remove('about-photo-wrap-selected');
-            photoWrap_li[i].classList.add('about-photo-wrap-unselected');
+            unselectedDiv = photoWrap_li[i];
         }
         // add selected class to description
         // first check the input id
         if (category == photoWrap_li[i].id) {
-            photoWrap_li[i].classList.remove('about-photo-wrap-unselected');
-            photoWrap_li[i].classList.add('about-photo-wrap-selected');
+            selectedDiv = photoWrap_li[i];
         }
     }
     el.classList.add('about-selected-photo-item');
+    show_hide_photo_animation(unselectedDiv, selectedDiv);
 }
+
+function show_hide_photo_animation(unselectedDiv, selectedDiv) {
+    unselectedDiv.classList.remove('about-photo-wrap-selected');
+    unselectedDiv.classList.add('about-photo-wrap-unselected'); // fade-out
+    setTimeout(function() {
+        unselectedDiv.classList.remove('about-photo-wrap-unselected');
+        selectedDiv.classList.add('about-photo-wrap-selected');
+    }, 450);
+}
+
 
 
 // About geojson data

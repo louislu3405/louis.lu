@@ -222,7 +222,7 @@ div.about-years-desbox-selected {
 }
 
 div.about-photo-desbox {
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     width: 34%;
     padding-left: 3%;
     padding-right: 3%;
@@ -231,7 +231,7 @@ div.about-photo-desbox {
 
 div.about-photo-wrap {
     display: none;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 56%;
     padding-left: 2%;
     padding-right: 2%;
@@ -240,14 +240,14 @@ div.about-photo-wrap {
 
 div.about-photo-wrap-selected {
     display: block;
-    /*animation-name: showPhoto;
+    animation-name: showPhoto;
     animation-duration: 500ms;
     animation-timing-function: ease-in;
-    animation-delay: 500ms;*/
+    /*animation-delay: 500ms;*/
 }
 
 div.about-photo-wrap-unselected {
-    display: none;
+    display: block;
     animation-name: hidePhoto;
     animation-duration: 500ms;
     animation-timing-function: ease-in;
@@ -290,17 +290,17 @@ li.about-selected-photo-item {
 }
 
 div.about-photo {
-    background-color: azure;
+    /* background-color: azure; */
     height: 440px;
     width: 440px;
     margin: 1%;
     float: left;
 }
 
-div.about-photo1 {
-    background-color:blanchedalmond;
-    height: 440px;
-    width: 440px;
-    margin: 1%;
-    float: left;
+
+img.about-photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3%;
 }
