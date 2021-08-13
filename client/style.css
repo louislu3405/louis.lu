@@ -166,13 +166,15 @@ li.about-years {
     padding-left: 46px;
     max-height: 24px;
     transition: max-height 2s;
+    cursor: pointer;
 }
 
 li.selected-years {
     font-family: Eina03;
     font-weight: 700;
     background: url('img/about_years_bullet.png') no-repeat;
-    height: 100px;
+    height: 24px;
+    margin-bottom: 76px;
     max-height: 500px;
 }
 
@@ -267,6 +269,7 @@ li.about-photo-list-item {
     font-weight: 500;
     font-size: 1.875em;
     padding-left: 46px;
+    cursor: pointer;
 }
 
 p.about-photo-description {
