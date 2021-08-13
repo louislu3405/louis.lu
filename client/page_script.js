@@ -73,8 +73,7 @@ let map = new mapboxgl.Map({
     container: 'map',
     center: [2.06, 41.07],
     zoom: 2,
-    style:
-    'mapbox://styles/mapbox/streets-v11',
+    style:'mapbox://styles/louis3405/cks80uk3x101a17rrqxbov68s',
     accessToken: 'pk.eyJ1IjoibG91aXMzNDA1IiwiYSI6ImNrY3duZ3JnaDBmdWwycWtkdWVja3h4bnQifQ.MEcSWWH2kKRPUaJ5IjXcfQ'
 });
 
